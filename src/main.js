@@ -9,7 +9,7 @@ if (require("electron-squirrel-startup")) {
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 769,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
       nodeIntegration: true,
@@ -19,7 +19,6 @@ const createWindow = () => {
   });
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-  mainWindow.webContents.openDevTools();
 
   const csp =
     "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https://api.beta.usecapsule.com https://app.beta.usecapsule.com; " +
